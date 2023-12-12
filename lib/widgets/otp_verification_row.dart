@@ -11,7 +11,7 @@ class OtpVerificationRow extends StatelessWidget {
       children: [
         Container(
           width: 60,
-          height: 100,
+          height: 60,
           child: OtpTextFormField(
             hintText: '5',
             controller: TextEditingController(),

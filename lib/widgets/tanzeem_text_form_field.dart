@@ -11,7 +11,7 @@ class TanzeemTextFormField extends StatelessWidget {
   final String? Function(String?)? validator;
   final bool obscureText ;
 
-   TanzeemTextFormField(
+   const TanzeemTextFormField(
       {
       required this.hint,
       this.controller,

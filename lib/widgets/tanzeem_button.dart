@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tanzeem/constants/colors.dart';
 
 class TanzeemButton extends StatelessWidget {
@@ -13,21 +14,21 @@ class TanzeemButton extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Container(
-      width: 380,
-      height: 60,
+      width: width*0.85,
+          height: height * 0.06,
       margin: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color:  kPrimaryColor,
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(8),
       ),
       child: MaterialButton(
         onPressed: onPressed,
         child: Text(text,
-            style: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-              fontSize: 18,
-        )),
+            style: GoogleFonts.urbanist(
+                  fontSize: 15,
+                  color:  Colors.white,
+                  fontWeight: FontWeight.w600
+                ),),
       ),
     );
   }
