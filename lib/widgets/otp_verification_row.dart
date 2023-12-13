@@ -8,52 +8,12 @@ class OtpVerificationRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Container(
-          width: 60,
-          height: 60,
-          child: OtpTextFormField(
-            hintText: '5',
-            controller: TextEditingController(),
-            validator: (value) {
-
-            },
-          ),
-        ),
-        Container(
-          width: 60,
-          height: 100,
-          child: OtpTextFormField(
-            hintText: '1',
-            controller: TextEditingController(),
-            validator: (value) {
-
-            },
-          ),
-        ),
-        Container(
-          width: 60,
-          height: 100,
-          child: OtpTextFormField(
-            hintText: '0',
-            controller: TextEditingController(),
-            validator: (value) {
-
-            },
-          ),
-        ),
-        Container(
-          width: 60,
-          height: 100,
-          child: OtpTextFormField(
-            hintText: '',
-            controller: TextEditingController(),
-            validator: (value) {
-
-            },
-          ),
-        ),
-      ],
+      children: List.generate(4, (index) => OtpTextFormField(
+          controller: TextEditingController(),
+          validator: (value) {
+            return null;
+          },
+        ),),
     );
   }
 }
